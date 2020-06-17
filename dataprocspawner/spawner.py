@@ -948,13 +948,6 @@ class DataprocSpawner(Spawner):
             (cluster_data['config'][server_group]['accelerators'][acc_idx]
                 ['accelerator_type_uri']) = (acc_val['accelerator_type_uri'].split('/')[-1])
        
-    # Temporarily disable Component Gateway until handled by core product.
-    # TODO(mayran): Remove when code in prod.
-    if (cluster_data['config']
-        .setdefault('endpoint_config', {})
-        .setdefault('enable_http_port_access', False)):
-      cluster_data['config']['endpoint_config']['enable_http_port_access'] = False
-    
     # Temporarily disable setting preemptibility field until Dataproc client
     # libraries support the enum value
     if (cluster_data['config'].setdefault('master_config', {})):
