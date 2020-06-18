@@ -24,7 +24,7 @@ setup(
     python_requires='>=3.6.0',
     version='0.1',
     description='DataprocSpawner for JupyterHub',
-    url='https://github.com/GoogleCloudPlatform/dataprocspawner',
+    url='https://github.com/bkvarda/dataprocspawner',
     license='Apache 2.0',
     packages=['dataprocspawner'],
     install_requires=[
